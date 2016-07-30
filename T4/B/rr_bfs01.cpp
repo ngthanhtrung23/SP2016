@@ -31,6 +31,7 @@ int main() {
     FOR(test,1,ntest) {
         int m, n;
         scanf("%d%d\n", &m, &n);
+        memset(a, 0, sizeof a);
         memset(f, -1, sizeof f);
         FOR(i,1,m) {
             scanf("%s\n", &tmp[0]);
@@ -38,6 +39,7 @@ int main() {
                 if (tmp[j-1] == '.') a[i][j] = 0;
                 else a[i][j] = 1;
         }
+        ++m; ++n;
 
         f[0][0] = 0;
         deque< pair<int,int> > qu;
@@ -66,5 +68,4 @@ int main() {
         cout << res << endl;
     }
 }
-
 
